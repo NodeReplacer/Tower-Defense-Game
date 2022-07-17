@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Game : MonoBehaviour
 {
@@ -157,6 +157,7 @@ public class Game : MonoBehaviour
 	}
     
     //Run when you click the mouse button
+	//Places a wall or a tower depending on if the player is holding shift.
 	void HandleTouch () {
 		GameTile tile = board.GetTile(TouchRay);
 		if (tile != null) {
@@ -168,6 +169,8 @@ public class Game : MonoBehaviour
 			}
 		}
 	}
+	//Right click
+	//Create destinations and spawn points depending on if the player is holding shift. 
     void HandleAlternativeTouch () {
 		GameTile tile = board.GetTile(TouchRay);
 		if (tile != null) {

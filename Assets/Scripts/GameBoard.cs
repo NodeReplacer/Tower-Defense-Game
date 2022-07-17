@@ -116,7 +116,7 @@ public class GameBoard : MonoBehaviour {
 		}
 	}
 	
-	//Send out a ray towards our mouse position.
+	//Gets any tile that is hit by "Ray ray".
     public GameTile GetTile (Ray ray) {
 		if (Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, 1)) {
 			int x = (int)(hit.point.x + size.x * 0.5f);
